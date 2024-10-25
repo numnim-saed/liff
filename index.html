@@ -61,7 +61,6 @@
     }
 
     async function scanCode() {
-      alert("ส่งข้อความสำเร็จ")
       const result = await liff.scanCode()
       document.getElementById("scanCode").append(result.value)
     }
