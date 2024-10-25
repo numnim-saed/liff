@@ -60,9 +60,12 @@
     }
 
     async function scanCode() {
+      const resullt = await liff.scanCode()
+      document.getElementById("btnScanCode").append(resullt.value)
     }
 
     function openWindow() {
+      alert("ttt")
       liff.openWindow({
         url: "https://line.me",
         external: true
