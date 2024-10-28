@@ -23,13 +23,13 @@
    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
    <script>
       async function getUserProfile() {
-      const profile = await liff.getProfile()
-      document.getElementById("pictureUrl").src = profile.pictureUrl
-      document.getElementById("userId").append(profile.userId)
-      document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("statusMessage").append(profile.statusMessage)
-      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
-    }
+        const profile = await liff.getProfile()
+        document.getElementById("pictureUrl").src = profile.pictureUrl
+        document.getElementById("userId").append(profile.userId)
+        document.getElementById("displayName").append(profile.displayName)
+        document.getElementById("statusMessage").append(profile.statusMessage)
+        document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
+      }
 
     async function main() {
       // alert("LINE Developers x Skooldio")
@@ -37,7 +37,7 @@
       if(liff.isLoggedIn()) {
         getUserProfile()
       } else {
-        liff.login({redirectUrl: "https://numnim-saed.github.io/liff/path"})
+        liff.login({redirectUri: "https://numnim-saed.github.io/liff/path"})
       }
     }
     main()
