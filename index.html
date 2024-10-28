@@ -7,6 +7,7 @@
   <!-- <link rel="stylesheet" href="css/style.css" media="all"> -->
   <script>
     document.write('<link rel="stylesheet" href="css/style.css?cache='+ new Date().getTime()+'" media="all">')
+    document.write('<script src="js/vconsole.min.js?cache='+ new Date().getTime() +'" >')
   </script>
 </head>
 <body>
@@ -42,7 +43,7 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <button id="btnClose" onclick="closed()">Close</button>
 
-  <script src="js/vconsole.min.js"></script>
+  <!-- <script src="js/vconsole.min.js"></script> -->
   <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
